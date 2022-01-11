@@ -1,4 +1,4 @@
-package com.example.pokemonimagesmvpapp.view
+package com.example.pokemonimagesmvpapp.view //TODO: check the coil process for failure
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
