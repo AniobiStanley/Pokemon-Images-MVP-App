@@ -28,7 +28,7 @@ class Presenter(
     // Course Detail TextView
     override fun onFinished(string: String?) {
         if (mainView != null) {
-            mainView!!.setString(string)
+            mainView!!.setImage(string)
             mainView!!.hideProgress()
         }
     }

@@ -4,8 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.ProgressBar
-import android.widget.TextView
+import coil.api.load
 import com.example.pokemonimagesmvpapp.R
 import com.example.pokemonimagesmvpapp.interfaces.Contract
 import com.example.pokemonimagesmvpapp.model.Model
@@ -13,7 +14,7 @@ import com.example.pokemonimagesmvpapp.presenter.Presenter
 
 class MainActivity : AppCompatActivity(), Contract.View {
     // creating object of TextView class
-    private var textView: TextView? = null
+    private var imageView: ImageView? = null
 
     // creating object of Button class
     private var button: Button? = null
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity(), Contract.View {
         setContentView(R.layout.activity_main)
 
         // assigning ID of the TextView
-        textView = findViewById(R.id.textView)
+        imageView = findViewById(R.id.imageView2)
 
         // assigning ID of the Button
         button = findViewById(R.id.button)
@@ -56,18 +57,18 @@ class MainActivity : AppCompatActivity(), Contract.View {
     // method to display the Course Detail TextView
     override fun showProgress() {
         progressBar!!.visibility = View.VISIBLE
-        textView!!.visibility = View.INVISIBLE
+        imageView!!.visibility = View.INVISIBLE
     }
 
     // method to hide the Course Detail TextView
     override fun hideProgress() {
         progressBar!!.visibility = View.GONE
-        textView!!.visibility = View.VISIBLE
+        imageView!!.visibility = View.VISIBLE
     }
 
     // method to set random string
     // in the Course Detail TextView
-    override fun setString(string: String?) {
-        textView!!.text = string
+    override fun setImage(string: String?) {
+        imageView!!.load(string)
     }
 }

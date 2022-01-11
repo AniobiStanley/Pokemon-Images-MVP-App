@@ -15,7 +15,7 @@ interface Contract {
 
         // method to set random
         // text on the TextView
-        fun setString(string: String?)
+        fun setImage(string: String?)
     }
 
     interface Model {
