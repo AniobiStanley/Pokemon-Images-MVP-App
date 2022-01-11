@@ -1,11 +1,15 @@
-package com.example.pokemonimagesmvpapp
+package com.example.pokemonimagesmvpapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
+import com.example.pokemonimagesmvpapp.R
 import com.example.pokemonimagesmvpapp.interfaces.Contract
+import com.example.pokemonimagesmvpapp.model.Model
+import com.example.pokemonimagesmvpapp.presenter.Presenter
 
 class MainActivity : AppCompatActivity(), Contract.View {
     // creating object of TextView class
